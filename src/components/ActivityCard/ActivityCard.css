@@ -1,0 +1,41 @@
+.activity-card {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.activity-card__icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+
+.activity-card__content {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.activity-card__number {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.activity-card__description {
+  font-size: 14px;
+  color: #8c8c8c;
+}
+
+.activity-card__time {
+  font-size: 14px;
+  color: #8c8c8c;
+}
