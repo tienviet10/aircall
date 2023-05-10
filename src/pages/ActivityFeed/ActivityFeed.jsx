@@ -36,6 +36,7 @@ class ActivityFeed extends Component {
       archivePhoneList: [],
       isModalOpen: false,
       callDetails: {},
+      isTabChanging: false,
     };
     this.handleTabClick = this.handleTabClick.bind(this);
     this.handleArchiveAll = this.handleArchiveAll.bind(this);
@@ -47,7 +48,11 @@ class ActivityFeed extends Component {
   }
 
   handleTabClick(tabName) {
-    this.setState({ activeTab: tabName });
+    // this.setState({ activeTab: tabName });
+    this.setState({ isTabChanging: true });
+    setTimeout(() => {
+      this.setState({ activeTab: tabName, isTabChanging: false });
+    }, 400);
   }
 
   handleArchiveAll() {
@@ -143,7 +148,11 @@ class ActivityFeed extends Component {
           handleTabClick={this.handleTabClick}
           activeTab={this.state.activeTab}
         />
-        <div className="tab-content">
+        <div
+          className={`tab-content ${
+            this.state.isTabChanging ? 'is-changing' : ''
+          }`}
+        >
           {this.state.activeTab === 'feed' && (
             <Feed
               phoneList={this.state.phoneList}

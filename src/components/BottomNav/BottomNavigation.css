@@ -13,7 +13,7 @@
   height: 60px;
 }
 
-.bottom-nav__item {
+.bottom-nav-item {
   flex-basis: 20%;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
   color: black;
 }
 
-.bottom-nav__item--large {
+.bottom-nav-item--large {
   padding: 5px;
   height: 50px;
   width: 50px;
@@ -33,16 +33,16 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.bottom-nav__item--large {
+.bottom-nav-item--large {
   position: relative;
   transform: translateY(-40%);
 }
 
-.bottom-nav__item.active {
+.bottom-nav-item.active {
   position: relative;
 }
 
-.bottom-nav__item.active::before {
+.bottom-nav-item.active::before {
   content: '';
   position: absolute;
   bottom: 0;

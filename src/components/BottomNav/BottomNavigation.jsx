@@ -25,31 +25,31 @@ class BottomNavigation extends React.Component {
     return (
       <div className="bottom-nav">
         <div
-          className={`bottom-nav__item ${activeIndex === 0 ? 'active' : ''}`}
+          className={`bottom-nav-item ${activeIndex === 0 ? 'active' : ''}`}
           onClick={() => this.handleClick(0)}
         >
           <BsTelephoneFill size={20} />
         </div>
         <div
-          className={`bottom-nav__item ${activeIndex === 1 ? 'active' : ''}`}
+          className={`bottom-nav-item ${activeIndex === 1 ? 'active' : ''}`}
           onClick={() => this.handleClick(1)}
         >
           <BsFillPersonFill />
         </div>
         <div
-          className="bottom-nav__item bottom-nav__item--large"
+          className="bottom-nav-item bottom-nav-item--large"
           onClick={() => this.handleClick(2)}
         >
           <CgMenuGridO />
         </div>
         <div
-          className={`bottom-nav__item ${activeIndex === 3 ? 'active' : ''}`}
+          className={`bottom-nav-item ${activeIndex === 3 ? 'active' : ''}`}
           onClick={() => this.handleClick(3)}
         >
           <AiFillSetting />
         </div>
         <div
-          className={`bottom-nav__item ${activeIndex === 4 ? 'active' : ''}`}
+          className={`bottom-nav-item ${activeIndex === 4 ? 'active' : ''}`}
           onClick={() => this.handleClick(4)}
         >
           <BsRecordCircle />

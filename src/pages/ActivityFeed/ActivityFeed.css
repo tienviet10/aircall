@@ -1,42 +1,7 @@
-.activity-feed {
-  list-style: none;
+.tab-content {
+  transition: opacity 0.5s;
 }
 
-.activity-date {
-  margin: 40px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.activity-date:before,
-.activity-date:after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px dashed #000;
-}
-
-.activity-date:before {
-  margin-right: 10px;
-}
-
-.activity-date:after {
-  margin-left: 10px;
-}
-
-.archive-all-button {
-  padding: 10px 0px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: gray;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  width: 100%;
-}
-
-.archive-all-button:hover {
-  background-color: gray;
+.tab-content.is-changing {
+  opacity: 0;
 }

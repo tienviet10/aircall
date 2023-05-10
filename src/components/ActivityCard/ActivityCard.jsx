@@ -15,14 +15,14 @@ const ActivityCard = ({
       className="activity-card"
       onClick={() => handleDetailsClick(phoneNum, description, time, date, id)}
     >
-      <div className="activity-card__icon">
+      <div className="activity-card-icon">
         <BsTelephoneFill size={20} color="green" />
       </div>
-      <div className="activity-card__content">
-        <div className="activity-card__number">{phoneNum}</div>
-        <div className="activity-card__description">{description}</div>
+      <div className="activity-card-content">
+        <div className="activity-card-number">{phoneNum}</div>
+        <div className="activity-card-description">{description}</div>
       </div>
-      <div className="activity-card__time">{time}</div>
+      <div className="activity-card-time">{time}</div>
     </div>
   );
 };
