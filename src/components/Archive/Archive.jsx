@@ -1,29 +1,32 @@
 import React from 'react';
-import './Feed.css';
+import './Archive.css';
 import ActivityCard from '../ActivityCard/ActivityCard.jsx';
 
-class Feed extends React.Component {
+class Archive extends React.Component {
   render() {
-    const phoneList = this.props.phoneList;
+    const archivePhoneList = this.props.archivePhoneList;
     const formattedPhoneObject = {};
-    for (let i = 0; i < phoneList.length; i++) {
-      if (phoneList[i].date in formattedPhoneObject) {
-        formattedPhoneObject[phoneList[i].date].calls.push(phoneList[i]);
+    for (let i = 0; i < archivePhoneList.length; i++) {
+      if (archivePhoneList[i].date in formattedPhoneObject) {
+        formattedPhoneObject[archivePhoneList[i].date].calls.push(
+          archivePhoneList[i]
+        );
       } else {
-        formattedPhoneObject[phoneList[i].date] = {
-          date: phoneList[i].date,
-          calls: [phoneList[i]],
+        formattedPhoneObject[archivePhoneList[i].date] = {
+          date: archivePhoneList[i].date,
+          calls: [archivePhoneList[i]],
         };
       }
     }
+
     const formattedPhoneList = Object.values(formattedPhoneObject);
     return (
       <div>
         <button
           className="archive-all-button"
-          onClick={this.props.handleArchiveAll}
+          onClick={this.props.handleUnarchive}
         >
-          Archive All
+          Unarchive All
         </button>
         <ul className="activity-feed">
           {formattedPhoneList.map((activity) => (
@@ -48,4 +51,4 @@ class Feed extends React.Component {
   }
 }
 
-export default Feed;
+export default Archive;
