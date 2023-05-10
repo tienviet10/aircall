@@ -32,6 +32,13 @@ class ActivityFeed extends Component {
           time: '10:30 AM',
           date: 'May 9, 2023',
         },
+        {
+          id: 4,
+          phoneNum: '+1 555-555-4567',
+          description: 'Made a call to John',
+          time: '10:45 AM',
+          date: 'May 10, 2023',
+        },
       ],
       archivePhoneList: [],
       isModalOpen: false,
