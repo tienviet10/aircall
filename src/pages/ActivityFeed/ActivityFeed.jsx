@@ -12,6 +12,20 @@ class ActivityFeed extends Component {
       activeTab: 'feed',
       phoneList: [
         {
+          id: 4,
+          phoneNum: '+1 555-555-4567',
+          description: 'Made a call to John',
+          time: '10:45 AM',
+          date: 'May 10, 2023',
+        },
+        {
+          id: 1,
+          phoneNum: '+1 555-123-4567',
+          description: 'Made a call to Jane',
+          time: '10:30 AM',
+          date: 'May 9, 2023',
+        },
+        {
           id: 2,
           phoneNum: '+1 555-987-6543',
           description: 'Made a call to Johnson',
@@ -24,20 +38,6 @@ class ActivityFeed extends Component {
           description: 'Made a call to Smith',
           time: '11:45 AM',
           date: 'May 8, 2023',
-        },
-        {
-          id: 1,
-          phoneNum: '+1 555-123-4567',
-          description: 'Made a call to Jane',
-          time: '10:30 AM',
-          date: 'May 9, 2023',
-        },
-        {
-          id: 4,
-          phoneNum: '+1 555-555-4567',
-          description: 'Made a call to John',
-          time: '10:45 AM',
-          date: 'May 10, 2023',
         },
       ],
       archivePhoneList: [],
