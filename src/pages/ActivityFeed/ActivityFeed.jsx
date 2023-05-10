@@ -48,7 +48,6 @@ class ActivityFeed extends Component {
   }
 
   handleTabClick(tabName) {
-    // this.setState({ activeTab: tabName });
     this.setState({ isTabChanging: true });
     setTimeout(() => {
       this.setState({ activeTab: tabName, isTabChanging: false });
