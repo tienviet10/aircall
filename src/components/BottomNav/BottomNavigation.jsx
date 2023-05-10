@@ -1,27 +1,62 @@
 import React from 'react';
 import './BottomNavigation.css';
-import { AiFillPhone } from 'react-icons/ai';
+import { AiFillSetting } from 'react-icons/ai';
+import {
+  BsFillPersonFill,
+  BsRecordCircle,
+  BsTelephoneFill,
+} from 'react-icons/bs';
+import { CgMenuGridO } from 'react-icons/cg';
 
-const BottomNavigation = () => {
-  return (
-    <div className="bottom-nav">
-      <div className="bottom-nav__item">
-        <AiFillPhone />
+class BottomNavigation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeIndex: 0 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(index) {
+    this.setState({ activeIndex: index });
+    this.props.handleTabChange(index);
+  }
+
+  render() {
+    const { activeIndex } = this.state;
+    return (
+      <div className="bottom-nav">
+        <div
+          className={`bottom-nav__item ${activeIndex === 0 ? 'active' : ''}`}
+          onClick={() => this.handleClick(0)}
+        >
+          <BsTelephoneFill size={20} />
+        </div>
+        <div
+          className={`bottom-nav__item ${activeIndex === 1 ? 'active' : ''}`}
+          onClick={() => this.handleClick(1)}
+        >
+          <BsFillPersonFill />
+        </div>
+        <div
+          className="bottom-nav__item bottom-nav__item--large"
+          onClick={() => this.handleClick(2)}
+        >
+          <CgMenuGridO />
+        </div>
+        <div
+          className={`bottom-nav__item ${activeIndex === 3 ? 'active' : ''}`}
+          onClick={() => this.handleClick(3)}
+        >
+          <AiFillSetting />
+        </div>
+        <div
+          className={`bottom-nav__item ${activeIndex === 4 ? 'active' : ''}`}
+          onClick={() => this.handleClick(4)}
+        >
+          <BsRecordCircle />
+        </div>
       </div>
-      <div className="bottom-nav__item">
-        <AiFillPhone />
-      </div>
-      <div className="bottom-nav__item bottom-nav__item--large">
-        <AiFillPhone />
-      </div>
-      <div className="bottom-nav__item">
-        <AiFillPhone />
-      </div>
-      <div className="bottom-nav__item">
-        <AiFillPhone />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default BottomNavigation;

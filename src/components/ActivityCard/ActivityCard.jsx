@@ -1,12 +1,12 @@
 import React from 'react';
 import './ActivityCard.css';
-import { AiFillPhone } from 'react-icons/ai';
+import { BsTelephoneFill } from 'react-icons/bs';
 
 const ActivityCard = ({ phoneNum, description, time }) => {
   return (
     <div className="activity-card">
       <div className="activity-card__icon">
-        <AiFillPhone color="green" size={20} />
+        <BsTelephoneFill size={20} color="green" />
       </div>
       <div className="activity-card__content">
         <div className="activity-card__number">{phoneNum}</div>

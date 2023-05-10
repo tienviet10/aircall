@@ -23,3 +23,20 @@
 .activity-date:after {
   margin-left: 10px;
 }
+
+.archive-all-button {
+  padding: 10px 0px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 100%;
+}
+
+.archive-all-button:hover {
+  background-color: gray;
+}
